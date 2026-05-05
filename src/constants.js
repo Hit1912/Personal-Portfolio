@@ -198,7 +198,7 @@ export const SkillsInfo = [
       image: "/images/attendance-system.png",
       tags: ["Angular", "C# .NET", "SQL Server"],
       github: "https://github.com/Hit1912/Attendance-Management-System",
-      webapp: "#",
+      webapp: "https://ams1-seven.vercel.app?_vercel_share=cc6Le5RPtKrGqw5OV5g3bFigsLYzNr4v",
     },
     {
       id: 3,
