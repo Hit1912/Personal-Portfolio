@@ -4,14 +4,19 @@ import About from "./components/About/About";
 import Skills from "./components/Skills/Skills";
 import Experience from "./components/Experience/Experience";
 import Work from "./components/Work/Work";
+import Trading from "./components/Trading/Trading";
+import Socials from "./components/Socials/Socials";
 import Education from "./components/Education/Education";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import BlurBlob from './components/BlurBlob';
+import CanvasBackground from './components/CanvasBackground';
 
 const App = () => {
   return (
-    <div className="bg-[#050414]">
+    <div className="bg-[#050414] relative min-h-screen overflow-hidden">
+      {/* 3D Background */}
+      <CanvasBackground />
 
        <BlurBlob position={{ top: '35%', left: '20%' }} size={{ width: '30%', height: '40%' }} />
 
@@ -23,7 +28,9 @@ const App = () => {
         <Skills />
         <Experience />
         <Work />
+        <Trading />
         <Education />
+        <Socials />
         <Contact />
         <Footer />
       </div>

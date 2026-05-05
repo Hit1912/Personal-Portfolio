@@ -33,32 +33,34 @@ const Navbar = () => {
     { id: "skills", label: "Skills" },
     { id: "experience", label: "Experience" },
     { id: "work", label: "Projects" },
+    { id: "trading", label: "Finance" },
     { id: "education", label: "Education" },
+    { id: "socials", label: "Socials" },
+    { id: "contact", label: "Contact" },
   ];
 
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-500 ${
         isScrolled 
-          ? "bg-[#050414]/80 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] border-b border-purple-900/30 py-3" 
-          : "bg-transparent py-6"
-      } px-[7vw] md:px-[7vw] lg:px-[20vw]`}
+          ? "bg-[#050414]/90 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.5)] border-b border-purple-900/30 py-2 sm:py-3" 
+          : "bg-transparent py-4 sm:py-6"
+      }`}
     >
-      <div className="text-white flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
         {/* Logo */}
         <div 
           onClick={() => handleMenuItemClick('about')}
-          className="text-2xl font-extrabold cursor-pointer group flex items-center tracking-tight"
+          className="text-xl sm:text-2xl font-extrabold cursor-pointer group flex items-center tracking-tight shrink-0"
         >
           <span className="text-purple-500 group-hover:text-pink-500 transition-colors duration-300">&lt;</span>
-          <span className="text-white group-hover:text-gray-300 transition-colors duration-300">Hit</span>
-          <span className="text-purple-500 group-hover:scale-110 transition-transform duration-300 inline-block">/</span>
-          <span className="text-white group-hover:text-gray-300 transition-colors duration-300">Dungrani</span>
+          <span className="text-white group-hover:text-gray-300 transition-colors duration-300">DHR</span>
+          <span className="text-purple-500 group-hover:scale-110 transition-transform duration-300 inline-block px-1">/</span>
           <span className="text-purple-500 group-hover:text-pink-500 transition-colors duration-300">&gt;</span>
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-8 text-gray-300 font-medium">
+        <ul className="hidden md:flex flex-1 justify-center space-x-4 lg:space-x-8 text-gray-300 font-medium">
           {menuItems.map((item) => (
             <li
               key={item.id}
@@ -68,7 +70,7 @@ const Navbar = () => {
             >
               <button 
                 onClick={() => handleMenuItemClick(item.id)}
-                className="py-1 tracking-wide"
+                className="py-1 text-sm lg:text-base tracking-wide whitespace-nowrap"
               >
                 {item.label}
               </button>
@@ -77,46 +79,47 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Social Icons */}
-        <div className="hidden md:flex space-x-4">
-          <a
-            href="https://github.com/hit1912"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-900 border border-gray-800 text-gray-400 hover:text-white hover:border-purple-500 hover:shadow-[0_0_15px_rgba(130,69,236,0.4)] transition-all duration-300 transform hover:-translate-y-1"
-          >
-            <FaGithub size={20} />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/hit-dungrani-b2804131a/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-900 border border-gray-800 text-gray-400 hover:text-white hover:border-purple-500 hover:shadow-[0_0_15px_rgba(130,69,236,0.4)] transition-all duration-300 transform hover:-translate-y-1"
-          >
-            <FaLinkedin size={20} />
-          </a>
-        </div>
+        {/* Social Icons & Mobile Toggle */}
+        <div className="flex items-center space-x-3 sm:space-x-4 shrink-0">
+          <div className="hidden md:flex space-x-3">
+            <a
+              href="https://github.com/hit1912"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-9 h-9 lg:w-10 lg:h-10 rounded-full bg-gray-900 border border-gray-800 text-gray-400 hover:text-white hover:border-purple-500 hover:shadow-[0_0_15px_rgba(130,69,236,0.4)] transition-all duration-300 transform hover:-translate-y-1"
+            >
+              <FaGithub size={18} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/hit-dungrani-b2804131a/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-9 h-9 lg:w-10 lg:h-10 rounded-full bg-gray-900 border border-gray-800 text-gray-400 hover:text-white hover:border-purple-500 hover:shadow-[0_0_15px_rgba(130,69,236,0.4)] transition-all duration-300 transform hover:-translate-y-1"
+            >
+              <FaLinkedin size={18} />
+            </a>
+          </div>
 
-        {/* Mobile Menu Icon */}
-        <div className="md:hidden">
-          {isOpen ? (
-            <FiX
-              className="text-3xl text-[#8245ec] cursor-pointer"
-              onClick={() => setIsOpen(false)}
-            />
-          ) : (
-            <FiMenu
-              className="text-3xl text-[#8245ec] cursor-pointer"
-              onClick={() => setIsOpen(true)}
-            />
-          )}
+          <div className="md:hidden">
+            {isOpen ? (
+              <FiX
+                className="text-2xl sm:text-3xl text-[#8245ec] cursor-pointer"
+                onClick={() => setIsOpen(false)}
+              />
+            ) : (
+              <FiMenu
+                className="text-2xl sm:text-3xl text-[#8245ec] cursor-pointer"
+                onClick={() => setIsOpen(true)}
+              />
+            )}
+          </div>
         </div>
       </div>
 
       {/* Mobile Menu Items */}
       {isOpen && (
-        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-[#050414] bg-opacity-50 backdrop-filter backdrop-blur-lg z-50 rounded-lg shadow-lg md:hidden">
-          <ul className="flex flex-col items-center space-y-4 py-4 text-gray-300">
+        <div className="fixed top-20 left-1/2 transform -translate-x-1/2 w-[90%] bg-[#050414]/95 backdrop-blur-2xl z-50 rounded-2xl shadow-2xl border border-purple-500/20 md:hidden overflow-hidden">
+          <ul className="flex flex-col items-center space-y-6 py-8 text-gray-300">
             {menuItems.map((item) => (
               <li
                 key={item.id}

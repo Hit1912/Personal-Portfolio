@@ -20,7 +20,7 @@ import firebaseLogo from './assets/tech_logo/firebase.png';
 import cLogo from './assets/tech_logo/c.png';
 import cppLogo from './assets/tech_logo/cpp.png';
 import javaLogo from './assets/tech_logo/java.png';
-import pythonLogo from './assets/tech_logo/python.png';
+
 import typescriptLogo from './assets/tech_logo/typescript.png';
 import gitLogo from './assets/tech_logo/git.png';
 import githubLogo from './assets/tech_logo/github.png';
@@ -58,6 +58,7 @@ import removebgLogo from './assets/work_logo/remove_bg.png';
 export const SkillsInfo = [
   {
     title: 'Frontend',
+    percentage: 90,
     skills: [
       { name: 'React.js', logo: reactjsLogo },
       { name: 'HTML5', logo: htmlLogo },
@@ -65,10 +66,12 @@ export const SkillsInfo = [
       { name: 'JavaScript', logo: javascriptLogo },
       { name: 'Tailwind CSS', logo: tailwindcssLogo },
       { name: 'Bootstrap', logo: bootstrapLogo },
+      { name: 'Angular', logo: angularLogo },
     ],
   },
   {
     title: 'Backend',
+    percentage: 60,
     skills: [
       { name: 'Node.js', logo: nodejsLogo },
       { name: 'Express.js', logo: expressjsLogo },
@@ -76,6 +79,7 @@ export const SkillsInfo = [
   },
   {
     title: 'Database',
+    percentage: 50,
     skills: [
       { name: 'MongoDB', logo: mongodbLogo },
       { name: 'SQL Server', logo: "https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg" },
@@ -83,12 +87,14 @@ export const SkillsInfo = [
   },
   {
     title: 'Tools',
+    percentage: 100,
     skills: [
       { name: 'Git', logo: gitLogo },
       { name: 'GitHub', logo: githubLogo },
       { name: 'REST APIs', logo: "https://img.icons8.com/nolan/64/api-settings.png" },
       { name: 'JWT Authentication', logo: "https://jwt.io/img/pic_logo.svg" },
       { name: 'VS Code', logo: vscodeLogo },
+      { name: 'Figma', logo: figmaLogo },
     ],
   },
 ];
@@ -134,9 +140,10 @@ export const SkillsInfo = [
       img: "https://www.google.com/s2/favicons?domain=vnsgu.ac.in&sz=128",
       school: "Veer Narmad South Gujarat University, Surat",
       date: "",
-      grade: "Grade: A",
+      grade: "SGPA :- 8.45 | Grade :- A+",
       desc: "Completed education with studies at the following affiliated colleges:",
       degree: "University",
+      website: "https://www.vnsgu.ac.in/",
       colleges: [
         { 
           name: "Prof. V. B. Shah Institute of Management, R. V. Patel College of Commerce, V. L. Shah College of Commerce & Sutex Bank College", 
@@ -150,7 +157,7 @@ export const SkillsInfo = [
       img: vpsLogo,
       school: "Shri Gopinathji Dev High School",
       date: "",
-      grade: "92.77%",
+      grade: "Percentage: 92.77%",
       desc: "Completed Higher Secondary Certificate.",
       degree: "HSC",
     },
@@ -159,7 +166,7 @@ export const SkillsInfo = [
       img: vpsLogo,
       school: "Shree Nayalkaran Sadvidhya Mandir Prathmik Shala",
       date: "",
-      grade: "95.32%",
+      grade: "Percentage: 95.32%",
       desc: "Completed Secondary School Certificate.",
       degree: "SSC",
     },
@@ -168,15 +175,24 @@ export const SkillsInfo = [
   export const projects = [
     {
       id: 0,
+      title: "Jewelry Management System",
+      description: "A premium, mobile-responsive website for a luxury jewelry business (Shubham Invitation) featuring an elegant dark-gold aesthetic, interactive product gallery, and smooth animations.",
+      image: "/images/jewelry.png",
+      tags: ["React.js", "Tailwind CSS", "Frontend", "UI/UX"],
+      github: "https://github.com/Hit1912/Jewelry-Management-System",
+      webapp: "https://jewelry-management-system-4csq49rgv-hit1912s-projects.vercel.app/",
+    },
+    {
+      id: 1,
       title: "Finance Platform Management System",
       description: "Financial dashboard, Transaction management, Authentication system, Reports generation.",
       image: "/images/finance-platform.png",
       tags: ["MongoDB", "Express.js", "React.js", "Node.js"],
       github: "https://github.com/Hit1912/finance-platform-management-system",
-      webapp: "#",
+      webapp: "https://dhrfinanceplatform.vercel.app",
     },
     {
-      id: 1,
+      id: 2,
       title: "Attendance Management System",
       description: "Attendance tracking, Admin panel, Reports generation.",
       image: "/images/attendance-system.png",
@@ -185,57 +201,129 @@ export const SkillsInfo = [
       webapp: "#",
     },
     {
-      id: 2,
+      id: 3,
       title: "ExamNest",
       description: "Online examination system, Timer-based tests, Result system.",
       image: "/images/examnest.png",
       tags: ["Angular", "C# ASP.NET", "SQL Server"],
       github: "https://github.com/Hit1912/ExamNest",
-      webapp: "#",
-    },
-    {
-      id: 3,
-      title: "Stock Market System",
-      description: "Stock visualization, Market trend analysis.",
-      image: "/images/stock-market.png",
-      tags: ["Python", "React.js", "Charts"],
-      github: "https://github.com/hit1912",
-      webapp: "#",
+      webapp: "https://papaya-sawine-89fa28.netlify.app/",
     },
     {
       id: 4,
-      title: "Advanced MERN AI Financial SaaS Platform",
-      description: "AI-based financial insights, SaaS dashboard, Secure login system.",
-      image: "/images/ai-financial-saas.png",
-      tags: ["MERN Stack", "AI Integration"],
-      github: "https://github.com/hit1912",
-      webapp: "#",
+      title: "DHR Nest - Cloud Storage",
+      description: "A decentralized, secure cloud storage platform for storing files beyond the clouds with enhanced security.",
+      image: "/images/filestorage.png",
+      tags: ["React.js", "Node.js", "Express", "MongoDB"],
+      github: "https://github.com/Hit1912/filestorage-management-system",
+      webapp: "https://dhrfilestorage.vercel.app/",
     },
     {
       id: 5,
-      title: "Future Project",
-      description: "Upcoming innovative application.",
-      image: "/images/project6.png",
-      tags: ["Coming Soon"],
-      github: "#",
-      webapp: "#",
-    },
-    {
-      id: 6,
-      title: "Future Project",
-      description: "Upcoming innovative application.",
-      image: "/images/project7.png",
-      tags: ["Coming Soon"],
-      github: "#",
-      webapp: "#",
-    },
-    {
-      id: 7,
-      title: "Future Project",
-      description: "Upcoming innovative application.",
-      image: "/images/project8.png",
-      tags: ["Coming Soon"],
-      github: "#",
-      webapp: "#",
+      title: "DHR Supermart - Grocery Store",
+      description: "A premium next-gen grocery shopping experience with real-time inventory and state-of-the-art precision.",
+      image: "/images/grocery.png",
+      tags: ["React.js", "Node.js", "Express", "MongoDB"],
+      github: "https://github.com/Hit1912/grocery-managment-system",
+      webapp: "https://dhrsupermart.vercel.app/",
     },
   ];  
+
+  export const tradingData = [
+    {
+      category: "Options Trading",
+      icon: "https://cdn-icons-png.flaticon.com/512/2933/2933116.png",
+      items: [
+        { name: "Nifty 50", symbol: "NIFTY" },
+        { name: "Bank Nifty", symbol: "BANKNIFTY" },
+        { name: "Fin Nifty", symbol: "FINNIFTY" },
+        { name: "Midcap Nifty", symbol: "MIDCPNIFTY" },
+        { name: "Sensex", symbol: "SENSEX" },
+      ],
+    },
+    {
+      category: "Favorite Stocks",
+      icon: "https://cdn-icons-png.flaticon.com/512/3594/3594415.png",
+      items: [
+        { name: "HDFC Bank", symbol: "HDFCBANK" },
+        { name: "State Bank of India", symbol: "SBIN" },
+        { name: "Reliance Industries", symbol: "RELIANCE" },
+        { name: "Tata Motors", symbol: "TATAMOTORS" },
+        { name: "Infosys", symbol: "INFY" },
+      ],
+    },
+    {
+      category: "Forex & Crypto",
+      icon: "https://cdn-icons-png.flaticon.com/512/5968/5968260.png",
+      items: [
+        { name: "Gold", symbol: "XAU/USD" },
+        { name: "Bitcoin", symbol: "BTC/USDT" },
+        { name: "Ethereum", symbol: "ETH/USDT" },
+        { name: "Euro / US Dollar", symbol: "EUR/USD" },
+        { name: "Solana", symbol: "SOL/USDT" },
+        { name: "Silver", symbol: "XAG/USD" },
+      ],
+    },
+  ];
+
+  export const referralLinks = {
+    indian: [
+      { name: "Zerodha", url: "https://zerodha.com/open-account?c=HLS953", icon: "https://cdn-icons-png.flaticon.com/512/3594/3594415.png" },
+      { name: "Angel One", url: "https://angel-one.onelink.me/Wjgr/x7pc3ckw", icon: "https://cdn-icons-png.flaticon.com/512/3594/3594415.png" },
+    ],
+    global: [
+      { name: "Binance", url: "https://www.binance.com/referral/earn-together/refer2earn-usdc/claim?hl=en&ref=GRO_28502_BYNSD&utm_source=referral_entrance&utm_medium=app_share_link_whatsapp", icon: "https://cdn-icons-png.flaticon.com/512/5968/5968260.png" },
+      { name: "Delta Exchange", url: "https://www.delta.exchange/?code=PEYCQZ", icon: "https://cdn-icons-png.flaticon.com/512/5968/5968260.png" },
+      { name: "CoinDCX", url: "https://invite.coindcx.com/77970764", icon: "https://cdn-icons-png.flaticon.com/512/5968/5968260.png" },
+      { name: "CoinSwitch", url: "https://coinswitch.co/in/refer?tag=5xdbg", icon: "https://cdn-icons-png.flaticon.com/512/5968/5968260.png" },
+    ]
+  };
+
+  export const tickerData = [
+    { symbol: "NIFTY 50", price: "22,519.40", change: "+0.85%", isUp: true },
+    { symbol: "BANKNIFTY", price: "48,159.00", change: "+1.20%", isUp: true },
+    { symbol: "HDFCBANK", price: "1,530.20", change: "-0.45%", isUp: false },
+    { symbol: "RELIANCE", price: "2,930.50", change: "+2.10%", isUp: true },
+    { symbol: "SBIN", price: "760.10", change: "+0.60%", isUp: true },
+    { symbol: "INFY", price: "1,450.80", change: "-1.15%", isUp: false },
+    { symbol: "BTC/USDT", price: "64,230.00", change: "+3.40%", isUp: true },
+    { symbol: "XAU/USD", price: "2,340.50", change: "+0.15%", isUp: true },
+  ];
+
+  export const SocialMedia = [
+    {
+      name: "GitHub",
+      url: "https://github.com/hit1912",
+      icon: "https://img.icons8.com/ios-filled/100/ffffff/github.png",
+      color: "bg-[#181717]",
+      hover: "hover:shadow-[0_0_20px_rgba(255,255,255,0.2)]",
+    },
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/hit-dungrani-b2804131a/",
+      icon: "https://img.icons8.com/ios-filled/100/ffffff/linkedin.png",
+      color: "bg-[#0A66C2]",
+      hover: "hover:shadow-[0_0_20px_rgba(10,102,194,0.4)]",
+    },
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/hit_dungrani_1912/",
+      icon: "https://img.icons8.com/ios-filled/100/ffffff/instagram-new.png",
+      color: "bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7]",
+      hover: "hover:shadow-[0_0_20px_rgba(238,42,123,0.4)]",
+    },
+    {
+      name: "Twitter",
+      url: "https://x.com/DungraniHit",
+      icon: "https://img.icons8.com/ios-filled/100/ffffff/x-coordinate.png",
+      color: "bg-[#000000]",
+      hover: "hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]",
+    },
+    {
+      name: "Email",
+      url: "mailto:hitdungrani1912@gmail.com",
+      icon: "https://img.icons8.com/ios-filled/100/ffffff/gmail-new.png",
+      color: "bg-[#DB4437]",
+      hover: "hover:shadow-[0_0_20px_rgba(219,68,55,0.4)]",
+    },
+  ];
